@@ -316,7 +316,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 
-public class RNMy2c2pSdkModule extends ReactContextBaseJavaModule { {
+public class RNMy2c2pSdkModule extends ReactContextBaseJavaModule {
   
   private Promise promise;
 
@@ -396,90 +396,4 @@ public class RNMy2c2pSdkModule extends ReactContextBaseJavaModule { {
     }
   }
 
-
 }
-
-// public class PGWWebViewFragment extends BaseFragment {
- 
-//   private final String TAG = PGWWebViewFragment.class.getName();
-//   private static final String ARG_REDIRECT_URL = "ARG_REDIRECT_URL";
-
-//   private String mRedirectUrl;
-
-//   public PGWWebViewFragment() { }
-
-//   public static PGWWebViewFragment newInstance(String redirectUrl) {
-//       PGWWebViewFragment fragment = new PGWWebViewFragment();
-//       Bundle args = new Bundle();
-//       args.putString(ARG_REDIRECT_URL, redirectUrl);
-//       fragment.setArguments(args);
-
-//       return fragment;
-//   }
-
-//   @Override
-//   public void onCreate(Bundle savedInstanceState) {
-//       super.onCreate(savedInstanceState);
-//       if (getArguments() != null) {
-
-//           mRedirectUrl = getArguments().getString(ARG_REDIRECT_URL);
-//       }
-//   }
-
-//   @Override
-//   public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-//       //Step 5: Authentication handling for 3DS payment.
-//       WebView webview = new WebView(getActivity());
-//       //Optional
-//       webview.getSettings().setBuiltInZoomControls(true);
-//       webview.getSettings().setSupportZoom(true);
-//       webview.getSettings().setLoadWithOverviewMode(true);
-//       webview.getSettings().setUseWideViewPort(true);
-//       webview.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
-
-//       //Mandatory
-//       webview.getSettings().setJavaScriptEnabled(true);
-//       webview.getSettings().setDomStorageEnabled(true); //Some bank page required. eg: am bank
-//       webview.setWebViewClient(new PGWWebViewClient(mTransactionStatusCallback, mWebViewClientCallback));
-
-//       webview.loadUrl(mRedirectUrl);
-
-//       return webview;
-//   }
-
-//   /**
-//    * Reference : https://developer.2c2p.com/v4.0.2/docs/api-sdk-transaction-status-inquiry
-//    */
-//   private final PGWWebViewTransactionStatusCallback mTransactionStatusCallback = new PGWWebViewTransactionStatusCallback() {
-       
-//       @Override
-//       public void onInquiry(String paymentToken) {
-
-//           //Do Transaction Status Inquiry API and close this WebView.
-//       }
-//   };
-
-//   private final PGWWebViewClientCallback mWebViewClientCallback = new PGWWebViewClientCallback() {
-
-//       @Override
-//       public void shouldOverrideUrlLoading(String url) {
-
-//           Log.i(TAG, "PGWWebViewClientCallback shouldOverrideUrlLoading : " + url);
-//       }
-
-//       @Override
-//       public void onPageStarted(String url) {
-
-//           Log.i(TAG, "PGWWebViewClientCallback onPageStarted : " + url);
-//       }
-
-//       @Override
-//       public void onPageFinished(String url) {
-
-//           Log.i(TAG, "PGWWebViewClientCallback onPageFinished : " + url);
-//       }
-//   };
-
-  
-// }
