@@ -316,16 +316,20 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 
-
-private Promise promise;
-
 public class RNMy2c2pSdkModule extends ReactContextBaseJavaModule { {
- 
+  
+  private Promise promise;
+
   @Override
   public void onCreate() {
       super.onCreate();
-      PGWSDKParams pgwsdkParams = new PGWSDKParamsBuilder(this, APIEnvironment.Production).build();
+      PGWSDKParams pgwsdkParams = new PGWSDKParamsBuilder(this, APIEnvironment.Sandbox).build();
       PGWSDK.initialize(pgwsdkParams);
+  }
+
+  @ReactMethod
+  public void setup(String privateKey, Boolean productionMode) {
+    onCreate();
   }
 
   @ReactMethod
