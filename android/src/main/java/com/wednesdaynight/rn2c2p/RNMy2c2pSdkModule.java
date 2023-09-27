@@ -319,7 +319,7 @@ import javax.net.ssl.HttpsURLConnection;
 
 private Promise promise;
 
-public class RNMy2c2pSdkModule extends Application {
+public class RNMy2c2pSdkModule extends ReactContextBaseJavaModule { {
  
   @Override
   public void onCreate() {
