@@ -5,6 +5,11 @@ module.exports = {
     RNMy2c2pSdk.setup(privateKey, production);
   },
 
+  requestJWTToken: function(params) {
+    var payment = Object.assign({}, defaultPaymentRequest, params);
+    return RNMy2c2pSdk.requestJWTToken(payment);
+  },
+
   requestPayment: function(params) {
     var payment = Object.assign({}, defaultPaymentRequest, params);
     return RNMy2c2pSdk.requestPayment(payment);
