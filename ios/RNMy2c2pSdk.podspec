@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                   RNMy2c2pSdk
                    DESC
-  s.homepage     = "https://github.com/oun/react-native-2c2p-sdk"
+  s.homepage     = "https://github.com/dangkhoa94/react-native-2c2p-sdk"
   s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
   s.author             = { "author" => "author@domain.cn" }
